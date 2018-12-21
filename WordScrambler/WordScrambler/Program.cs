@@ -19,11 +19,31 @@ namespace WordScrambler
 
                 switch (option.ToUpper())
                 {
-
+                    case "F":
+                        Console.WriteLine("Enter scrambled words file name :");
+                        ExecuteScrambledWord.InFileScenario();
+                        break;
+                    case "M":
+                        Console.WriteLine("Enter scrambled words manually :");
+                        ExecuteScrambledWord.ManualScenario();
+                        break;
+                    default:
+                        Console.WriteLine("Option is not recognised");
+                        break;
                 }
+                var continueWordUnscrambleDecision = string.Empty;
+                do
+                {
+                    Console.WriteLine("Do you want to continue the program?");
+
+                } while (!continueWordUnscrambleDecision.Equals("Y", StringComparison.OrdinalIgnoreCase) && !continueWordUnscrambleDecision.Equals("N", StringComparison.OrdinalIgnoreCase));
             } while ();
 
          
         }
+
+        
     }
+
+   
 }
