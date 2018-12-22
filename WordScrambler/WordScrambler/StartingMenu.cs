@@ -15,17 +15,17 @@ namespace WordScrambler
 
             do
             {
-                Console.WriteLine("Please enter the Option - F for file and M for Manual");
+                Console.Write("Please enter the Option - F for file and M for Manual :");
                 var option = Console.ReadLine() ?? string.Empty;
 
                 switch (option.ToUpper())
                 {
                     case "F":
-                        Console.WriteLine("Enter scrambled words file name :");
+                        Console.Write("Enter scrambled words file name :");
                         ExecuteScrambledWord.InFileScenario();
                         break;
                     case "M":
-                        Console.WriteLine("Enter scrambled words manually :");
+                        Console.Write("Enter scrambled words manually :");
                         ExecuteScrambledWord.ManualScenario();
                         break;
                     default:
@@ -37,7 +37,7 @@ namespace WordScrambler
 
                 do
                 {
-                    Console.WriteLine("Do you want to continue the program?");
+                    Console.Write("Do you want to continue the program?");
                     continueDecision = (Console.ReadLine() ?? string.Empty);
 
                 } while (!continueDecision.Equals("Y", StringComparison.OrdinalIgnoreCase) && !continueDecision.Equals("N", StringComparison.OrdinalIgnoreCase));
