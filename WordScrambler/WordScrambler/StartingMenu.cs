@@ -33,17 +33,17 @@ namespace WordScrambler
                         break;
                 }
 
-                var continueWordUnscrambleDecision = string.Empty;
+                var continueDecision = string.Empty;
 
                 do
                 {
                     Console.WriteLine("Do you want to continue the program?");
-                    continueWordUnscrambleDecision = (Console.ReadLine() ?? string.Empty);
+                    continueDecision = (Console.ReadLine() ?? string.Empty);
 
-                } while (!continueWordUnscrambleDecision.Equals("Y", StringComparison.OrdinalIgnoreCase) && !continueWordUnscrambleDecision.Equals("N", StringComparison.OrdinalIgnoreCase));
+                } while (!continueDecision.Equals("Y", StringComparison.OrdinalIgnoreCase) && !continueDecision.Equals("N", StringComparison.OrdinalIgnoreCase));
 
 
-                continueWordUnscrambler = continueWordUnscrambleDecision.Equals("Y", StringComparison.OrdinalIgnoreCase);
+                continueWordUnscrambler = continueDecision.Equals("Y", StringComparison.OrdinalIgnoreCase);
 
 
 

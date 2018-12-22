@@ -2,16 +2,23 @@
 
 namespace WordScrambler
 {
-    internal class ExecuteScrambledWord
+     class ExecuteScrambledWord
     {
-        internal static void ManualScenario()
+        public static void ManualScenario()
         {
-            throw new NotImplementedException();
+            var manualInput = Console.ReadLine() ?? string.Empty;
+            string[]  scrambledWords = manualInput.Split(',');
+            DisplayWords.DisplayMatchedUnscrambledWords(scrambledWords);
         }
 
-        internal static void InFileScenario()
+        public static void InFileScenario()
         {
-            throw new NotImplementedException();
+            var filename = Console.ReadLine() ?? string.Empty;
+            string[] scrambledWords = DisplayWords._fileReader.Read(filename);
+            DisplayWords.DisplayMatchedUnscrambledWords(scrambledWords); 
+
         }
+
+        
     }
 }
